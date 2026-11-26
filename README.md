@@ -21,7 +21,7 @@ Analysis of customer behavior, retention, and lifetime value for an e-commerce c
 
 **📈 Visualization:**
 
-<img src="images\1_customer_segementation.png" alt="LTV Distribution" style="width: 50%; height: auto;">
+<img src="images\1_customer_segmentation.png" alt="LTV Distribution" style="width: 50%; height: auto;">
 
 📊 **Key Findings:** 
 
@@ -44,9 +44,9 @@ Analysis of customer behavior, retention, and lifetime value for an e-commerce c
 
 **📈 Visualization:**
 
-<img src="images\2_cohort_analysis.png" alt="Cohort Analysis" style="width:50%; hight: auto; ">
+<img src="images\2_cohort_analysis.png" alt="Cohort Analysis" style="width:50%; height: auto; ">
 
-**📊 Key FIndings:**
+**📊 Key Findings:**
 - Revenue per customer shows an alarming decreasing trend over time
 - 2022-2024 cohorts are consistently performing worse than earlier cohorts
 - NOTE: Although net revenue is increasing, this is likely due to a larger customer base, which is not reflective of customer value
@@ -54,7 +54,7 @@ Analysis of customer behavior, retention, and lifetime value for an e-commerce c
 **💡Business Insights**
 - Value extracted from customers is decreasing over time and needs furthers investigation
 - In 2023 we saw a drop in number of customers acquired, which is concerning
-- WIth both lowering LTV and decreasing customer acquisition, the company is facing a potential revenue decline
+- With both lowering LTV and decreasing customer acquisition, the company is facing a potential revenue decline
 
 ### 3. Customer Retention
 🖥️Query: [3_retention_analysis.sql](3_retention_analysis.sql)
@@ -75,7 +75,7 @@ Analysis of customer behavior, retention, and lifetime value for an e-commerce c
 **💡Business Insights:**
 - Strengthen early engagement strategies to target the first 1-2 years with onboarding incentives, loyalty rewards, and personalized offers to improve long-term retention
 - Re-engage high-value churned customers by focusing on targeted win-back campaigns rather than broad retention efforts, as reactivating valuable users may yield higher ROI
-- Predict & preempt churn risk and customer-specific warning indicators to proactively intervene with ar-risk users before they lapse
+- Predict & preempt churn risk and customer-specific warning indicators to proactively intervene with at-risk users before they lapse
 
 ### Strategic REcommendations
 
@@ -97,4 +97,8 @@ Analysis of customer behavior, retention, and lifetime value for an e-commerce c
 ## Technical Details
 - **Database:** PostgreSQL
 - **Analysis Tools:** PostgreSQL, DBeaver, PGadmin
-- **Visualization:** ChatGPT
+- **Visualization:** Python/matplotlib
+
+## Credits
+
+This project was developed as part of the **Intermediate SQL** course by [Luke Barousse](https://github.com/lukebarousse). The business questions and the README structure are adapted from the course material, used with the author's permission as stated in the course videos. I followed the course and ran the analysis myself using PostgreSQL and DBeaver.
