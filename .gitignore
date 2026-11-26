@@ -1,0 +1,12 @@
+# Local configuration files
+.dbeaver/
+
+# Configuration files and credentials
+.credentials-config.json*
+credentials-config.json
+data-sources.json
+project-metadata.json
+.settings/org.eclipse.core.resources.prefs
+Diagrams/Contoso  ERD.erd
+Scripts/Script-8.sql
+Scripts/Script.sql
