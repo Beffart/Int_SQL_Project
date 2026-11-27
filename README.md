@@ -77,7 +77,7 @@ Analysis of customer behavior, retention, and lifetime value for an e-commerce c
 - Re-engage high-value churned customers by focusing on targeted win-back campaigns rather than broad retention efforts, as reactivating valuable users may yield higher ROI
 - Predict & preempt churn risk and customer-specific warning indicators to proactively intervene with at-risk users before they lapse
 
-### Strategic REcommendations
+### Strategic Recommendations
 
 1. **Customer Value Optimization** (Customer Segmentation)
     - Launch VIP program for 12,372 high-value customers (66% of revenue)
