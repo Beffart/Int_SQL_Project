@@ -23,7 +23,7 @@ Analysis of customer behavior, retention, and lifetime value for an e-commerce c
 
 <img src="images\1_customer_segmentation.png" alt="LTV Distribution" style="width: 50%; height: auto;">
 
-🖥️ Script: [1_customer_segmentation.py](1_customer_segmentation.py)
+🐍 Chart: [1_customer_segmentation.py](1_customer_segmentation.py)
 
 
 📊 **Key Findings:** 
@@ -49,7 +49,7 @@ Analysis of customer behavior, retention, and lifetime value for an e-commerce c
 
 <img src="images\2_cohort_analysis_chart.png" alt="Cohort Analysis" style="width:50%; height: auto; ">
 
-🖥️ Script: [2_cohort_analysis_chart.py](2_cohort_analysis_chart.py)
+🐍 Chart: [2_cohort_analysis_chart.py](2_cohort_analysis_chart.py)
 
 
 **📊 Key Findings:**
@@ -71,10 +71,12 @@ Analysis of customer behavior, retention, and lifetime value for an e-commerce c
 
 **📈 Visualization:**
 
-<img src="images\3_customer_churn_cohort_year.png" alt="Customer Churn By Cohort Year" style="width: 50%; height: auto;">
+<img src="images\3_retention_analysis.png" alt="Customer Churn By Cohort Year" style="width: 50%; height: auto;">
+
+🐍 Chart: [3_retention_analysis_chart.py](3_retention_analysis_chart.py)
 
 **📊Key Findings:**
-- Cohort churn stabilizes at 90% after 2-3 years, indicating a predictable long-term retention pattern
+- Churn is ~90% across all cohorts (89.6%-91.6%), including the most recent ones, which suggests the issue is systemic and happens early in the customer lifecycle.
 - Retention rates are consistently low (8-10%) across all cohorts, suggesting retention issues are systemic rather than specific to certain years
 - Newer cohorts (2022-2023) show similar churn trajectories, signaling that without intervention, future cohorts will follow the same pattern
 
@@ -103,7 +105,7 @@ Analysis of customer behavior, retention, and lifetime value for an e-commerce c
 ## Technical Details
 - **Database:** PostgreSQL
 - **Analysis Tools:** PostgreSQL, DBeaver, PGadmin
-- **Visualization:** Python/matplotlib
+- **Visualization:** Python, Matplotlib
 
 ## Credits
 
