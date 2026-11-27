@@ -9,3 +9,4 @@ project-metadata.json
 .settings/org.eclipse.core.resources.prefs
 Diagrams/Contoso  ERD.erd
 1_customer_segmentation.csv
+2_cohort_analysis.csv

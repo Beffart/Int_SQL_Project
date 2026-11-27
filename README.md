@@ -47,7 +47,10 @@ Analysis of customer behavior, retention, and lifetime value for an e-commerce c
 
 **📈 Visualization:**
 
-<img src="images\2_cohort_analysis.png" alt="Cohort Analysis" style="width:50%; height: auto; ">
+<img src="images\2_cohort_analysis_chart.png" alt="Cohort Analysis" style="width:50%; height: auto; ">
+
+🖥️ Script: [2_cohort_analysis_chart.py](2_cohort_analysis_chart.py)
+
 
 **📊 Key Findings:**
 - Revenue per customer shows an alarming decreasing trend over time
