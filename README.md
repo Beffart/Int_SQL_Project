@@ -21,7 +21,10 @@ Analysis of customer behavior, retention, and lifetime value for an e-commerce c
 
 **📈 Visualization:**
 
-<img src="images\1_customer_segmentation_pie.png" alt="LTV Distribution" style="width: 50%; height: auto;">
+<img src="images\1_customer_segmentation.png" alt="LTV Distribution" style="width: 50%; height: auto;">
+
+🖥️ Script: [1_customer_segmentation.py](1_customer_segmentation.py)
+
 
 📊 **Key Findings:** 
 

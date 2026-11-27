@@ -1,9 +1,8 @@
 """
-Customer segmentation charts (LTV).
+Customer segmentation - revenue share pie chart.
 
-Reads the query result exported from PostgreSQL (CSV) and generates:
-  - a pie chart of revenue share by segment
-  - a bar chart comparing % of customers vs % of revenue by segment
+Reads the query result exported from PostgreSQL (CSV) and generates
+a pie chart showing each segment's share of total revenue.
 """
 from pathlib import Path
 
@@ -13,7 +12,7 @@ import pandas as pd
 CSV_PATH = "1_customer_segmentation.csv"
 OUTPUT_DIR = Path("images")
 
-# Same palette in both charts
+# Same palette as the original combined script
 COLORS = {"High-Value": "#4169E1", "Mid-Value": "#00BFFF", "Low-Value": "#ADD8E6"}
 NEUTRAL = "#B0BEC5"
 
@@ -62,53 +61,14 @@ def plot_pie(df: pd.DataFrame) -> None:
     )
 
     plt.tight_layout()
-    plt.savefig(OUTPUT_DIR / "1_customer_segmentation_pie.png", dpi=200)
-    plt.close(fig)
-
-
-def plot_bars(df: pd.DataFrame) -> None:
-    """Grouped bars: % of customers vs % of revenue by segment."""
-    x = range(len(df))
-    width = 0.38
-
-    fig, ax = plt.subplots(figsize=(9, 6))
-    bars_customers = ax.bar([i - width / 2 for i in x], df["pct_customers"], width,
-                            label="% of customers", color=NEUTRAL)
-    bars_revenue = ax.bar([i + width / 2 for i in x], df["pct_revenue"], width,
-                          label="% of revenue", color=COLORS["High-Value"])
-
-    # Value labels on top of each bar
-    for bars in (bars_customers, bars_revenue):
-        for bar in bars:
-            height = bar.get_height()
-            ax.annotate(f"{height:.1f}%",
-                        xy=(bar.get_x() + bar.get_width() / 2, height),
-                        xytext=(0, 4), textcoords="offset points",
-                        ha="center", va="bottom", fontsize=12)
-
-    ax.set_title("Share of customers vs share of revenue, by segment",
-                 fontsize=16, loc="left", pad=20)
-    ax.set_xticks(list(x))
-    ax.set_xticklabels(df["segment"], fontsize=13)
-    ax.set_ylim(0, df[["pct_customers", "pct_revenue"]].max().max() * 1.15)
-    ax.set_yticks([])  # values are already labeled on the bars
-
-    for side in ("top", "right", "left"):
-        ax.spines[side].set_visible(False)
-    ax.legend(frameon=False, fontsize=12, loc="upper right")
-
-    plt.tight_layout()
-    plt.savefig(OUTPUT_DIR / "1_customer_segmentation_bars.png", dpi=200)
+    plt.savefig(OUTPUT_DIR / "1_customer_segmentation.png", dpi=200)
     plt.close(fig)
 
 
 if __name__ == "__main__":
     OUTPUT_DIR.mkdir(exist_ok=True)
-
     data = load_data(CSV_PATH)
     print(data[["segment", "customer_count", "total_ltv", "pct_customers", "pct_revenue"]]
           .round(1).to_string(index=False))
-
     plot_pie(data)
-    plot_bars(data)
-    print(f"Charts saved to {OUTPUT_DIR}/")
+    print(f"Pie chart saved to {OUTPUT_DIR}/1_customer_segmentation_pie.png")
